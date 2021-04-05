@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "promotions": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "promotionId": {
+              "type": "string"
+            },
+            "orderId": {
+              "type": "integer"
+            },
+            "promoArea": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "promoType": {
+              "type": "string"
+            },
+            "showPrice": {
+              "type": "boolean"
+            },
+            "showText": {
+              "type": "boolean"
+            },
+            "localizedTexts": {
+              "type": "object",
+              "properties": {
+                "ar": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "en": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "ar",
+                "en"
+              ]
+            }
+          },
+          "required": [
+            "promotionId",
+            "orderId",
+            "promoArea",
+            "promoType",
+            "showPrice",
+            "showText",
+            "localizedTexts"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "promotions"
+  ]
+}
